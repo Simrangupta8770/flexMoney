@@ -57,7 +57,7 @@ const Form = () => {
       // You can handle the successful payment confirmation here
       // For example, submit the form or update the UI
       console.log('Payment confirmed!');
-      axios.post('/reg',{
+      axios.post('https://flexmoney-30re.onrender.com/reg',{
         
           name: formData.name,
           email: formData.email,
@@ -67,11 +67,11 @@ const Form = () => {
         
       }).then(()=>{
         setFormData(initialData);
-
+        setPaymentConfirmed(true);
       }).catch((error)=>{
         console.log("error");
       })
-      setPaymentConfirmed(true);
+      
     }
 
     // Close the modal regardless of the payment result
