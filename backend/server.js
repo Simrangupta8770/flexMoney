@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
 const UserReg =require('./models/UserRegModel');
 const cors=require('cors');
+const path=require("path");
 const app = express();
 const PORT = 5000;
 
@@ -36,6 +37,19 @@ app.post('/reg', async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error' });
   }
 });
+const __dirname1 = path.resolve();
+
+if (true) {
+  app.use(express.static(path.join(__dirname1, "/interntask/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
 
 app.listen(PORT,()=>{
   console.log(`server started ${PORT}`);
