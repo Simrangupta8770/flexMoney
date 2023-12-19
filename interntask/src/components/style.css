@@ -1,0 +1,38 @@
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: large;
+}
+label{
+    width:20%;
+}
+.form-group .input{
+    width:60%;
+    height:50px;
+}
+.form-group .input input{
+    width:60%;
+    height:30px;
+    border:1px grey solid;
+    border-radius: 0;
+    margin-left: 5px;
+}
+input:focus{
+    outline:0;
+}
+button{
+    padding:5px 10px;
+    height:50px;
+    border: 0;
+    border-radius: 5px;
+    background-color: blue;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+select{
+    width:63%;
+    height:30px;
+   padding: 5px;
+}
