@@ -1,12 +1,12 @@
--->frontend
+<b>-->frontend</b><br>
+<br>
+cd internTask<br>
+npm install<br>
+npm start  //start the frontend<br>
 
-cd internTask
-npm install
-npm start  //start the frontend
 
+<b>-->Steps to run backend</b><br><br>
 
---->Steps to run backend
-
-add an env file in mongo db url
-npm install
-node backend/server.js   //start the backend
+add an env file in mongo db url<br>
+npm install<br>
+node backend/server.js   //start the backend<br>
