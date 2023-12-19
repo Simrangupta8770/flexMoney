@@ -57,7 +57,7 @@ const Form = () => {
       // You can handle the successful payment confirmation here
       // For example, submit the form or update the UI
       console.log('Payment confirmed!');
-      axios.post('http://localhost:5000/reg',{
+      axios.post('/reg',{
         
           name: formData.name,
           email: formData.email,
